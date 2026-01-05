@@ -1,0 +1,72 @@
+# Postman API Testing Guide
+
+This guide provides the exact URLs, HTTP methods, and data payloads to test your Event Management API endpoints in Postman.
+
+## Base URL
+**`http://localhost:5000/api/v3/app`**
+
+---
+
+## 1. Create an Event
+**Endpoint:** `POST /events`
+**URL:** `http://localhost:5000/api/v3/app/events`
+
+**Body Type:** `form-data` (Required for file upload)
+
+| Key | Value (Example) | Type |
+| :--- | :--- | :--- |
+| [name](file:///c:/Users/jeswa/Downloads/proje%20events/config/multer.js#17-24) | Tech Conference 2024 | Text |
+| `tagline` | Innovating the Future | Text |
+| `schedule` | 2024-12-25T10:00:00Z | Text |
+| `description` | Annual tech gathering of innovators | Text |
+| `moderator` | John Doe | Text |
+| `category` | Technology | Text |
+| `sub_category` | AI | Text |
+| `rigor_rank` | 5 | Text |
+| `files[image]` | [Select a file] | **File** |
+
+---
+
+## 2. Get Latest Events (Pagination)
+**Endpoint:** `GET /events`
+**URL:** `http://localhost:5000/api/v3/app/events?type=latest&limit=5&page=1`
+
+**Query Params:**
+- `type`: `latest` (Required)
+- `limit`: `5` (Optional, default 5)
+- `page`: `1` (Optional, default 1)
+
+**Response:** Returns a list of events with pagination metadata.
+
+---
+
+## 3. Get Event by ID
+**Endpoint:** `GET /events`
+**URL:** `http://localhost:5000/api/v3/app/events?id=<YOUR_EVENT_ID>`
+
+> **Note:** First create an event, then copy the `_id` from the response to test this endpoint.
+
+**Query Params:**
+- `id`: `<The Event ID>`
+
+---
+
+## 4. Update Event
+**Endpoint:** `PUT /events/:id`
+**URL:** `http://localhost:5000/api/v3/app/events/<YOUR_EVENT_ID>`
+
+**Body Type:** `form-data`
+
+| Key | Value (Example) | Type |
+| :--- | :--- | :--- |
+| [name](file:///c:/Users/jeswa/Downloads/proje%20events/config/multer.js#17-24) | Updated Tech Conference | Text |
+| `tagline` | New Tagline | Text |
+| `files[image]` | [Select new file] | **File** (Optional) |
+
+---
+
+## 5. Delete Event
+**Endpoint:** `DELETE /events/:id`
+**URL:** `http://localhost:5000/api/v3/app/events/<YOUR_EVENT_ID>`
+
+**Response:** Returns success message if deleted.
