@@ -46,7 +46,7 @@ npm start
 
 The server will start on `http://localhost:3000`
 
-## 📖 API Documentation
+## API Documentation
 
 ### Base URL
 ```
@@ -223,7 +223,7 @@ curl -X DELETE "http://localhost:3000/api/v3/app/events/6577f8a9c3d2e4b8f9a1b2c3
 }
 ```
 
-## 🧪 Testing with Postman
+##  Testing with Postman
 
 ### Setting up Postman
 
@@ -267,7 +267,7 @@ curl -X DELETE "http://localhost:3000/api/v3/app/events/6577f8a9c3d2e4b8f9a1b2c3
    - Try uploading a file > 5MB
    - Expected: 400 Bad Request
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 event-management-api/
@@ -302,7 +302,7 @@ event-management-api/
 - **Size Limit**: 5MB maximum file size
 - **Security**: File type validation on both extension and mimetype
 
-## 🚨 Error Handling
+##  Error Handling
 
 ### 404 - Not Found
 - Invalid routes
@@ -330,7 +330,7 @@ event-management-api/
 }
 ```
 
-## 🔍 Troubleshooting
+## Troubleshooting
 
 ### Common Issues
 
@@ -359,14 +359,14 @@ Enable detailed error messages:
 NODE_ENV=development
 ```
 
-## 📊 Performance Considerations
+##  Performance Considerations
 
 - **Pagination**: Always use pagination for large datasets
 - **File Size**: 5MB limit prevents server overload
 - **Connection Pooling**: MongoDB connection reused
 - **Indexing**: Consider adding indexes on frequently queried fields
 
-## 🔒 Security Best Practices
+##  Security Best Practices
 
 - **Input Validation**: All inputs validated before processing
 - **File Upload**: Strict file type and size validation
@@ -374,12 +374,12 @@ NODE_ENV=development
 - **CORS**: Configured for cross-origin requests
 - **Environment Variables**: Sensitive data in `.env`
 
-## 🚀 Production Deployment
+##  Production Deployment
 
 1. **Environment Setup:**
    ```bash
    NODE_ENV=production
-   PORT=3000
+   PORT=5000
    MONGODB_URI=mongodb+srv://user:pass@cluster.mongodb.net/event_management
    ```
 
@@ -401,7 +401,7 @@ NODE_ENV=development
    }
    ```
 
-## 📈 Monitoring
+##  Monitoring
 
 ### Health Check
 ```bash
@@ -414,7 +414,7 @@ curl http://localhost:3000/health
   "success": true,
   "message": "Event Management API is running",
   "timestamp": "2024-01-10T15:30:00.000Z",
-  "version": "1.0.0"
+
 }
 ```
 
