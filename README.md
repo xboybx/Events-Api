@@ -2,22 +2,6 @@
 
 A robust Node.js/Express API for managing events with file upload capabilities and comprehensive error handling. Built with native MongoDB driver for optimal performance.
 
-## 🚀 Features
-
-- **Event Management**: Full CRUD operations for events
-- **File Upload**: Image upload support with multer
-- **Pagination**: Efficient pagination for event listings
-- **Error Handling**: Comprehensive 404 and 500 error handling
-- **Native MongoDB**: Uses native MongoDB driver (no ORM/ODM)
-- **RESTful Design**: Clean and intuitive API structure
-- **Documentation**: Complete API documentation with examples
-
-## 📋 Prerequisites
-
-- Node.js (>= 14.0.0)
-- MongoDB (>= 4.4)
-- npm or yarn
-
 ## 🛠 Installation & Setup
 
 ### 1. Clone and Install

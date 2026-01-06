@@ -10,7 +10,7 @@ class Database {
         try {
             if (!this.client) {
                 this.client = new MongoClient(process.env.MONGODB_URI)
-                console.log("MongoDB Client Created")
+                cosn
                 await this.client.connect()
                 console.log("MongoDB Connected Successfully")
             }
