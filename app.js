@@ -7,7 +7,10 @@ const path = require("path")
 const db = require("./config/db");
 const eventRoutes = require("./routes/eventRoutes");
 
-app.use(cors());
+app.use(cors({
+    origin: "*",
+    credentials: true
+}));
 
 //Reads Json Data From the Client and Converts it into JavaScript Object
 app.use(express.json());
