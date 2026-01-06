@@ -59,7 +59,7 @@ Authorization: Bearer <token>
 **Request Body:**
 ```json
 {
-  "title": "New Feature Alert! 🚀",
+  "title": "New Feature Alert! ",
   "image_url": "https://example.com/images/feature-banner.jpg",
   "scheduled_at": "2024-01-15T10:00:00Z",
   "description": "We've just launched an amazing new feature that will revolutionize how you use our platform. Check it out now and let us know what you think!",
@@ -76,7 +76,7 @@ Authorization: Bearer <token>
   "message": "Nudge created successfully",
   "data": {
     "_id": "6577f8a9c3d2e4b8f9a1b2c3",
-    "title": "New Feature Alert! 🚀",
+    "title": "New Feature Alert! ",
     "image_url": "https://example.com/images/feature-banner.jpg",
     "scheduled_at": "2024-01-15T10:00:00.000Z",
     "description": "We've just launched an amazing new feature...",
@@ -125,7 +125,7 @@ GET /api/v3/app/nudges?page=2&limit=5&status=scheduled
     "nudges": [
       {
         "_id": "6577f8a9c3d2e4b8f9a1b2c3",
-        "title": "New Feature Alert! 🚀",
+        "title": "New Feature Alert! ",
         "image_url": "https://example.com/images/feature-banner.jpg",
         "scheduled_at": "2024-01-15T10:00:00.000Z",
         "description": "We've just launched an amazing new feature...",
@@ -164,7 +164,7 @@ GET /api/v3/app/nudges?page=2&limit=5&status=scheduled
   "success": true,
   "data": {
     "_id": "6577f8a9c3d2e4b8f9a1b2c3",
-    "title": "New Feature Alert! 🚀",
+    "title": "New Feature Alert! ",
     "image_url": "https://example.com/images/feature-banner.jpg",
     "scheduled_at": "2024-01-15T10:00:00.000Z",
     "description": "We've just launched an amazing new feature...",
